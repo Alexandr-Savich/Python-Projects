@@ -13,7 +13,7 @@ def print_dict(d, indent=0) -> None:
 
 
 def read_file() -> list:
-    """Читает таблицу из файла, считает число строк и возвращает словарь из строк и их число"""
+    """Читает таблицу из файла и возвращает лист из строк"""
     with open('Corp_Summary.csv', newline='', encoding="utf8") as file:
         reader = csv.DictReader(file, delimiter=';')
         data = []
