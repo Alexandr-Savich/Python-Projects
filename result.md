@@ -1,6 +1,6 @@
 # Task 1
 ## python -m doctest -v -o NORMALIZE_WHITESPACE main.py:
-Trying:
+```Trying:
     encode('SOS')
 Expecting:
     '... --- ...'
