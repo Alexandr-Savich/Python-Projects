@@ -1,5 +1,5 @@
-# Task 1
-## python -m doctest -v -o NORMALIZE_WHITESPACE main.py:
+ # Task 1
+ ## python -m doctest -v -o NORMALIZE_WHITESPACE main.py:
 Trying:
     encode('SOS')
 Expecting:
