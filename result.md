@@ -72,3 +72,34 @@ ok
 3 passed and 1 failed.
 ***Test Failed*** 1 failures.
 ```
+# Task 2
+## python -m pytest main.py
+
+```collected 3 items                                                                                                                                                                       
+
+main.py ..F                                                                                                                                                                       [100%]
+
+======================================================================================= FAILURES =======================================================================================
+__________________________________________________________ test_decode[.-.. --- -. --.   . ...- . -. .. -. --.-LONG EVENING] ___________________________________________________________
+
+code = '.-.. --- -. --.   . ...- . -. .. -. --.', message = 'LONG EVENING'
+
+    @pytest.mark.parametrize('code,message', [
+        ('... --- ...', 'SOS'),
+        ('.- -... -.-.', 'ABC'),
+        ('.-.. --- -. --.   . ...- . -. .. -. --.', 'LONG EVENING')
+    ])
+    def test_decode(code, message):
+>       assert decode(code) == message, f'expected {message}, got {decode(code)}'
+E       AssertionError: expected LONG EVENING, got LONGEVENING
+E       assert 'LONGEVENING' == 'LONG EVENING'
+E         - LONG EVENING
+E         ?     -
+E         + LONGEVENING
+
+main.py:68: AssertionError
+=============================================================================== short test summary info ================================================================================
+FAILED main.py::test_decode[.-.. --- -. --.   . ...- . -. .. -. --.-LONG EVENING] - AssertionError: expected LONG EVENING, got LONGEVENING
+============================================================================= 1 failed, 2 passed in 0.05s ==============================================================================
+PS C:\Users\alexa\PycharmProjects\HW_Tests>
+```
