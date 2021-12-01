@@ -9,3 +9,6 @@
 # Task 3
 ## python -m unittest -v fit.py
 Тесты пройдены успешно
+# Task 4
+## python -m pytest -v py_fit.py
+Тесты пройдены успешно
