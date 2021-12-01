@@ -137,7 +137,7 @@ py_fit.py::test_empty PASSED                                                    
 ```
 # Task 5
 ## coverage run -m pytest -v Tic-Tac.py
-
+```
 ================================================================================= test session starts ==================================================================================
 platform win32 -- Python 3.9.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- c:\users\alexa\pycharmprojects\tic-tac\venv\scripts\python.exe
 cachedir: .pytest_cache
@@ -150,3 +150,4 @@ Tic-Tac.py::test_year[date1-2018] PASSED                                        
 Tic-Tac.py::test_year[date2-2013] PASSED                                                                                                                                          [100%]
 
 ================================================================================== 4 passed in 0.10s ===================================================================================
+```
