@@ -103,3 +103,18 @@ FAILED main.py::test_decode[.-.. --- -. --.   . ...- . -. .. -. --.-LONG EVENING
 ============================================================================= 1 failed, 2 passed in 0.05s ==============================================================================
 PS C:\Users\alexa\PycharmProjects\HW_Tests>
 ```
+
+# Task 3
+## python -m unittest -v fit.py
+```
+PS C:\Users\alexa\PycharmProjects\HW_testing>  python -m unittest -v fit.py
+test_argless (fit.Test_fit) ... ok
+test_empty (fit.Test_fit) ... ok
+test_encoding (fit.Test_fit) ... ok
+test_single (fit.Test_fit) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+```
