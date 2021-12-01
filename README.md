@@ -12,3 +12,10 @@
 # Task 4
 ## python -m pytest -v py_fit.py
 Тесты пройдены успешно
+# Task 5
+## coverage run -m pytest -v Tic-Tac.py
+Запуск тестирования
+## coverage html
+Создание директории html
+##  htmlcov\index.html
+Переход на нее
