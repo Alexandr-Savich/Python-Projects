@@ -118,3 +118,20 @@ Ran 4 tests in 0.001s
 
 OK
 ```
+# Task 4
+## python -m pytest -v py_fit.py
+```
+================================================================================= test session starts ==================================================================================
+platform win32 -- Python 3.9.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Users\alexa\PycharmProjects\HW_fit\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\alexa\PycharmProjects\HW_fit
+collected 5 items                                                                                                                                                                       
+
+py_fit.py::test_fit_transform[vector0-expected0] PASSED                                                                                                                           [ 20%]
+py_fit.py::test_fit_transform[vector1-expected1] PASSED                                                                                                                           [ 40%]
+py_fit.py::test_argless PASSED                                                                                                                                                    [ 60%]
+py_fit.py::test_single PASSED                                                                                                                                                     [ 80%]
+py_fit.py::test_empty PASSED                                                                                                                                                      [100%]
+
+================================================================================== 5 passed in 0.02s ===================================================================================
+```
