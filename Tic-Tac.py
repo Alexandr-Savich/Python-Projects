@@ -38,26 +38,21 @@ def what_is_year_now() -> int:
 def test_raise_exception():
     data = {'currentDateTime': '1999,12,22'}
 
-    with open('exception_test.json', 'w') as exc_test:
+    with open('exception_test.json', 'w+') as exc_test:
         json.dump(data, exc_test)
+        exc_test.seek(0)
+        with pytest.raises(ValueError):
+            with patch.object(urllib.request, 'urlopen', return_value=exc_test):
+                result = what_is_year_now()
 
-    with pytest.raises(ValueError), open('exception_test.json', 'r') as exc_test, patch.object(urllib.request,
-                                                                                               'urlopen',
-                                                                                               return_value=exc_test):
-        result = what_is_year_now()
 
+def test_year():
+    dates = [({'currentDateTime': '22.12.1999'}, 1999),({'currentDateTime': '2018-09-01'}, 2018)]
+    for date in dates:
+        with open('date_test.json', 'w+') as test:
+            json.dump(date[0], test)
+            test.seek(0)
+            with patch.object(urllib.request, 'urlopen', return_value=test):
+                func_year = what_is_year_now()
 
-@pytest.mark.parametrize('date,year', [
-    ({'currentDateTime': '22.12.1999'}, 1999),
-    ({'currentDateTime': '2018-09-01'}, 2018),
-    ({'currentDateTime': '11.07.2013'}, 2013)
-])
-def test_year(date, year):
-    with open('date_test.json', 'w') as test:
-        json.dump(date, test)
-
-    with open('date_test.json', 'r') as test, patch.object(urllib.request, 'urlopen', return_value=test):
-        func_year = what_is_year_now()
-
-    assert func_year == year, f'Expected {year}, got {func_year}'
-
+        assert func_year == date[1], f'Expected {date[1]}, got {func_year}'
