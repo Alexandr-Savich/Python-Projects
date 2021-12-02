@@ -142,12 +142,11 @@ py_fit.py::test_empty PASSED                                                    
 platform win32 -- Python 3.9.5, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- c:\users\alexa\pycharmprojects\tic-tac\venv\scripts\python.exe
 cachedir: .pytest_cache
 rootdir: C:\Users\alexa\PycharmProjects\Tic-Tac
-collected 4 items                                                                                                                                                                       
+collected 2 items                                                                                                                                                                       
 
-Tic-Tac.py::test_raise_exception PASSED                                                                                                                                           [ 25%]
-Tic-Tac.py::test_year[date0-1999] PASSED                                                                                                                                          [ 50%]
-Tic-Tac.py::test_year[date1-2018] PASSED                                                                                                                                          [ 75%]
-Tic-Tac.py::test_year[date2-2013] PASSED                                                                                                                                          [100%]
+Tic-Tac.py::test_raise_exception PASSED                                                                                                                                           [ 50%]
+Tic-Tac.py::test_year PASSED                                                                                                                                                      [100%]
 
-================================================================================== 4 passed in 0.10s ===================================================================================
+================================================================================== 2 passed in 0.09s ===================================================================================
+
 ```
