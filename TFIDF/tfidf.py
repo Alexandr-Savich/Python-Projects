@@ -90,7 +90,28 @@ def transform(matrix):
         tfidf.append(tfidfs)
     return tfidf
 
+class TfidfTransformer():
+    def fit_transform(self, matrix):
+        tf = transform(matrix)
+        idf = idf(matrix)
 
+        tf_idf = []
+        for text in tf:
+            tf_idf.append([round(a * b, 3) for a, b in zip(text, idf)])
+
+        return tf_idf
+
+
+class TfidfVectorizer(CountVectorizer):
+    def __init__(self) -> None:
+        super().__init__()
+        self._tfidf_transformer = TfidfTransformer()
+
+    def fit_transform(self, corpus):
+        count_matrix = super().fit_transform(corpus)
+        return self._tfidf_transformer.fit_transform(count_matrix)
+    
+    
 if __name__ == '__main__':
     countvec = CountVectorizer()
     corpus = [
