@@ -34,6 +34,13 @@ class Color:
                      self.green_level,
                      self.blue_level)
 
+    def _contrast(self, c, value):
+        cl = (-256) * (1 - c)
+        f = (259 * (cl + 259)) / (255 * (259 - cl))
+        l = f * (value - 128) + 128
+        return int(l)
+    
+    
 if __name__ == '__main__':
     red = Color(255, 0, 0)
     green = Color(0, 255, 0)
